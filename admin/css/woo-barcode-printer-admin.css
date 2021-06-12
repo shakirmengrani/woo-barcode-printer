@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+
+#app{
+    display: flex;
+    align-items: center;
+}
+
+.primaryBtn{
+    background: #007cba;
+    color: #ffffff;
+    width: 80%;
+    padding: 5px;
+    border: solid #007cba;
+    font-size: medium;
+}
+
+.centerItem{
+    display: flex;
+    justify-content: center;
+}
+
+.barcode{
+    font-family: 'Libre Barcode 128 Text', cursive;
+}
+
+.col-25ptg{
+    width: 25%;
+}
+
+.col-75ptg{
+    width: 75%;
+}
+
+.col-100ptg{
+    width: 100%;
+}
+
+.p-all-10px{
+    padding: 10px;
+}
+
+.p-all-15px{
+    padding: 15px;
+}
