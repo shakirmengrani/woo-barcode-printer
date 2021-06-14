@@ -101,7 +101,14 @@ class Woo_Barcode_Printer_Admin {
 		 */
 		wp_enqueue_script( $this->plugin_name . '-file-saver', plugin_dir_url( __FILE__ ) . 'js/FileSaver.min.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name . '-dom-to-image', plugin_dir_url( __FILE__ ) . 'js/dom-to-image.min.js', array( 'jquery' ), $this->version, false );
-		wp_enqueue_script( $this->plugin_name . '-barcode', plugin_dir_url( __FILE__ ) . 'js/jquery-barcode.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-codabar', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.codabar.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-code39', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.code39.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-code128', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.code128.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-ean-upc', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.ean-upc.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-itf', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.itf.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-msi', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.msi.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode-pharmacode', plugin_dir_url( __FILE__ ) . 'js/barcodes/JsBarcode.pharmacode.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-barcode', plugin_dir_url( __FILE__ ) . 'js/JsBarcode.all.min.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/woo-barcode-printer-admin.js', array( 'jquery', 'jquery-ui-autocomplete' ), $this->version, false );
 
 	}

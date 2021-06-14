@@ -56,32 +56,22 @@ class Woo_Barcode_Printer_Settings {
     public function render_settings_page_content($arg = ''){
         ?>
 		<div class="wrap" id="app">
-			<div class="col-75ptg centerItem">
-				<div id="barcode"></div>
+			<div class="row">
+				<div class="col-25ptg p-all-10px">
+					<input type="text" class="fullWidth" name="productName" placeholder="Enter Product Name / SKU" />
+				</div>
+				<div class="col-25ptg p-all-10px">
+					<input type="number" class="fullWidth" name="textSize" min="8" max="16" value="8" />
+				</div>
+				<div class="col-25ptg p-all-10px">
+					<button name="generateBtn" class="primaryBtn fullWidth">Generate</button>
+				</div>
+				<div class="centerItem col-25ptg p-all-10px">
+					<button name="downloadBtn" class="primaryBtn fullWidth">Save</button>
+				</div>
 			</div>
-			<div class="col-25ptg">
-				<div class="col-100ptg p-all-10px">
-					<input type="text" name="productName" placeholder="Enter Product Name / SKU" />
-				</div>
-				<div class="col-100ptg p-all-10px">
-					<input type="number" name="textSize" min="8" max="16" value="8" />
-				</div>
-				<div class="col-100ptg p-all-10px">
-					<button name="downloadBtn" class="primaryBtn">Save</button>
-				</div>
-			</div>
+			<div id="barcodeContainer" class="row col-100ptg"></div>
 		</div>
         <?php
     }
-
-	public function initialize_display_options(){
-		if( false == get_option( 'wbp_display_options' ) ) {
-			$default_array = array(
-				'show_header'		=>	'',
-				'show_content'		=>	'',
-				'show_footer'		=>	'',
-			);
-			add_option( 'wbp_display_options', $default_array );
-		}
-	}
 }
